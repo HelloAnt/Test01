@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style type="text/css">
+        .message,
+        .modal {
+
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            z-index:1000;
+            width: 100%;
+            height: 150px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            background-color: green;
+        }
+        .message .modal-header,
+        .modal .modal-header{
+            position: relative;
+            background: transparent;
+            font-family: 'Segoe UI Light', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+            font-weight: 200;
+            color: #fff;
+            font-size: 20pt;
+            letter-spacing: 0.01em;
+            line-height: 22pt;
+            font-smooth: always;
+            font-size: 14pt;
+            margin-top: 20px;
+            margin-left: 18%;
+
+        }
+        .message .modal-body,
+        .modal .modal-body{
+            position: relative;
+            margin-right: 50px;
+            margin-left: 10px;
+            color: #fff;
+            font-family: 'Segoe UI', 'Open Sans', Verdana, Arial, Helvetica, sans-serif;
+            font-weight: 300;
+            font-size: 11pt;
+            font-smooth: always;
+            margin-top: 10px;
+            margin-left:18%;
+            line-height: 16px;
+            /*overflow:hidden;
+            text-overflow:ellipsis;
+            white-space:nowrap;*/
+            height: 30px;
+
+            width:800px;
+
+        }
+        .modal-alert-foot,
+        .modal .modal-foot{
+            width:150px;
+            float:right;
+            margin-top:20px;
+            margin-right:10%;
+            color: #fff;
+            position: relative;
+            height : 25%;
+        }
+
+        .modal-alert-foot .btn,
+        .modal .modal-foot .btn{
+            float:left;
+            text-align: center;
+            height:20px;
+            width:50px;
+            border: solid 2px;
+            border-color:#fff;
+            margin-left:5px;
+        }
+
+        .modal-mask{
+            background: none repeat scroll 0 0 #000000;
+            height: 100%;
+            left: 0;
+            opacity: 0.7;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="../lib/handlebars.js"></script>
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../lib/ember-1.0.0-rc.3.js"></script>
+    <script type="text/javascript" src="../components/core.js"></script>
+    <script type="text/javascript" src="../components/messageBox.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            App = Em.Application.create();
+            $("#btn1").click(function(){
+                for(var i = 0 ;i < 1 ;i++){
+                    Bootstrap.MessageBox.popup({
+                        title : i,
+                        info : "这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框这是一个确认框",
+                        isConfirm : true,
+                        //isAlert : true,
+                        callback : function(opts, event){
+                            if(opts.primary){
+                                //alert("确定");
+                            }
+                            if(opts.secondary){
+                                //alert("取消")
+                            }
+                        }
+                    });
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<button id="btn1" accesskey="">弹出</button>
+</body>
+</html>
