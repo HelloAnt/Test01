@@ -3,8 +3,6 @@
  */
 !(function (window) {
     var Bootstrap = Em.Namespace.create();
-    /**
-     *    code here
-     */
+    var xx = 234;
     window.Bootstrap = Bootstrap;
 })(this);
